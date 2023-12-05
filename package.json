@@ -16,6 +16,7 @@
     "test:jest": "jest --ci --coverage",
     "test:unit": "yarn run test:jest && yarn run test:unit:report",
     "build-mod-descriptor": "stripes mod descriptor --full --strict | jq '.[]' > module-descriptor.json ",
+    "formatjs-compile": "formatjs compile-folder --ast --format simple ./translations/ui-authorization-policies ./translations/ui-authorization-policies/compiled",
     "test:unit:report": "cp -r ./artifacts/coverage-jest ./artifacts/coverage"
   },
   "stripes": {
@@ -79,6 +80,7 @@
     "@folio/stripes-erm-components": "^7.0.3 || ^8.0.0",
     "@folio/stripes-erm-testing": "^1.0.0",
     "@folio/stripes-testing": "^4.2.0",
+    "@formatjs/cli": "^6.1.3",
     "@testing-library/dom": "^8.16.0",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^12.1.5",
