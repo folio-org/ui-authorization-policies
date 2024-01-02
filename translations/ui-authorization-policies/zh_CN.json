@@ -1,12 +1,12 @@
 {
-    "meta.title": "Authorization policies",
-    "search": "Search",
-    "new": "New",
-    "columns.name": "Name",
-    "columns.description": "Description",
-    "columns.updatedDate": "Updated",
-    "columns.updatedBy": "Updated by",
-    "assignedUsers": "Assigned users",
-    "assignUnassign": "Assign/Unassign",
-    "generalInformation": "General Information"
+    "meta.title": "授权政策",
+    "search": "搜索",
+    "new": "新建",
+    "columns.name": "名称",
+    "columns.description": "描述",
+    "columns.updatedDate": "已更新",
+    "columns.updatedBy": "更新者",
+    "assignedUsers": "已分配用户",
+    "assignUnassign": "分配/取消分配",
+    "generalInformation": "概况"
 }
