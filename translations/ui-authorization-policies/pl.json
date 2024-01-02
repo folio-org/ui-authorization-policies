@@ -1,9 +1,9 @@
 {
     "meta.title": "Authorization policies",
     "search": "Search",
-    "new": "New",
-    "columns.name": "Name",
-    "columns.description": "Description",
+    "new": "Nowy",
+    "columns.name": "Nazwa",
+    "columns.description": "Opis",
     "columns.updatedDate": "Updated",
     "columns.updatedBy": "Updated by",
     "assignedUsers": "Assigned users",
