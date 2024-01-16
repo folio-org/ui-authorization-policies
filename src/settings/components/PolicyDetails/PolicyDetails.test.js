@@ -5,7 +5,7 @@ import { renderWithIntl } from '@folio/stripes-erm-testing';
 import translationsProperties from '../../../../test/helpers/translationsProperties';
 import '@testing-library/jest-dom';
 
-import { PolicyDetails } from '.';
+import PolicyDetails from './PolicyDetails';
 
 const onClose = jest.fn();
 
