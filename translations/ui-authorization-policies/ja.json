@@ -1,11 +1,11 @@
 {
     "meta.title": "Authorization policies",
     "search": "Search",
-    "new": "New",
-    "columns.name": "Name",
+    "new": "新規",
+    "columns.name": "名前",
     "columns.description": "Description",
     "columns.updatedDate": "Updated",
-    "columns.updatedBy": "Updated by",
+    "columns.updatedBy": "更新者",
     "assignedUsers": "Assigned users",
     "assignUnassign": "Assign/Unassign",
     "generalInformation": "General Information"
