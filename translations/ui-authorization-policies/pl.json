@@ -1,12 +1,12 @@
 {
     "meta.title": "Authorization policies",
-    "search": "Search",
+    "search": "Szukaj",
     "new": "Nowy",
     "columns.name": "Nazwa",
     "columns.description": "Opis",
-    "columns.updatedDate": "Updated",
-    "columns.updatedBy": "Updated by",
-    "assignedUsers": "Assigned users",
-    "assignUnassign": "Assign/Unassign",
+    "columns.updatedDate": "Aktualizowany",
+    "columns.updatedBy": "Aktualizowany przez",
+    "assignedUsers": "Przydzieleni użytkownicy",
+    "assignUnassign": "Przypisz/odpisz",
     "generalInformation": "General Information"
 }
