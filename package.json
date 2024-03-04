@@ -58,6 +58,21 @@
         "subPermissions": [
           "settings.enabled"
         ]
+      },
+      {
+        "permissionName": "ui-authorization-policies.settings.admin",
+        "displayName": "Settings (Authorization policies): Can manage authorization policies",
+        "description": "",
+        "subPermissions": [
+          "settings.authorization-policies.enabled",
+          "policies.item.get",
+          "policies.item.put",
+          "policies.item.delete",
+          "policies.item.post",
+          "policies.collection.get",
+          "policies.collection.post"
+        ],
+        "visible": true
       }
     ]
   },
