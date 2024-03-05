@@ -1,6 +1,6 @@
 {
   "name": "@folio/authorization-policies",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "FOLIO app for Authorization Policies",
   "main": "src/index.js",
   "repository": "folio/ui-authorization-policies",
