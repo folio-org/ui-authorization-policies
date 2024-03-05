@@ -25,7 +25,7 @@
     ],
     "displayName": "ui-authorization-policies.meta.title",
     "route": "/authorization-policies",
-    "home": "/autorization-policies",
+    "home": "/authorization-policies",
     "hasSettings": true,
     "queryResource": "query",
     "okapiInterfaces": {
