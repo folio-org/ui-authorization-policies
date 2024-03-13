@@ -8,5 +8,6 @@
     "columns.updatedBy": "更新者",
     "assignedUsers": "已分配用户",
     "assignUnassign": "分配/取消分配",
-    "generalInformation": "概况"
+    "generalInformation": "概况",
+    "permission.settings.admin": "Settings (Authorization policies): Can manage authorization policies"
 }
