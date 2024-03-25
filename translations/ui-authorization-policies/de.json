@@ -1,12 +1,13 @@
 {
     "meta.title": "Authorization policies",
     "search": "Search",
-    "new": "New",
+    "new": "Neu",
     "columns.name": "Name",
-    "columns.description": "Description",
-    "columns.updatedDate": "Updated",
-    "columns.updatedBy": "Updated by",
-    "assignedUsers": "Assigned users",
-    "assignUnassign": "Assign/Unassign",
-    "generalInformation": "General Information"
+    "columns.description": "Beschreibung",
+    "columns.updatedDate": "Aktualisiert",
+    "columns.updatedBy": "Aktualisiert von",
+    "assignedUsers": "Zugewiesene Personen",
+    "assignUnassign": "Zuweisen / Entfernen",
+    "generalInformation": "Allgemeine Informationen",
+    "permission.settings.admin": "Settings (Authorization policies): Can manage authorization policies"
 }
