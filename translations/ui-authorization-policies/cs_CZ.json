@@ -8,5 +8,6 @@
     "columns.updatedBy": "Aktualizoval",
     "assignedUsers": "Přiřazení uživatelé",
     "assignUnassign": "Přiřadit/Zrušit",
-    "generalInformation": "Obecné informace"
+    "generalInformation": "Obecné informace",
+    "permission.settings.admin": "Settings (Authorization policies): Can manage authorization policies"
 }

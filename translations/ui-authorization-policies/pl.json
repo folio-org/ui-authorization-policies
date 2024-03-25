@@ -8,5 +8,6 @@
     "columns.updatedBy": "Aktualizowany przez",
     "assignedUsers": "Przydzieleni użytkownicy",
     "assignUnassign": "Przypisz/odpisz",
-    "generalInformation": "General Information"
+    "generalInformation": "General Information",
+    "permission.settings.admin": "Settings (Authorization policies): Can manage authorization policies"
 }
