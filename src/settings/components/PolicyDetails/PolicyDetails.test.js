@@ -1,9 +1,9 @@
 import React from 'react';
-import { cleanup } from '@testing-library/react';
+import { cleanup } from '@folio/jest-config-stripes/testing-library/react';
 
 import { renderWithIntl } from '@folio/stripes-erm-testing';
 import translationsProperties from '../../../../test/helpers/translationsProperties';
-import '@testing-library/jest-dom';
+import '@folio/jest-config-stripes/testing-library/jest-dom';
 
 import PolicyDetails from './PolicyDetails';
 
