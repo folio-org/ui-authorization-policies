@@ -1,8 +1,8 @@
 import React from 'react';
 import { renderWithIntl } from '@folio/stripes-erm-testing';
 
-import { cleanup } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
+import { cleanup } from '@folio/jest-config-stripes/testing-library/react';
+import userEvent from '@folio/jest-config-stripes/testing-library/user-event';
 import SettingsPage from './SettingsPage';
 import translationsProperties from '../../../../test/helpers/translationsProperties';
 
