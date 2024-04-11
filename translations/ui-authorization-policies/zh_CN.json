@@ -9,5 +9,5 @@
     "assignedUsers": "已分配用户",
     "assignUnassign": "分配/取消分配",
     "generalInformation": "概况",
-    "permission.settings.admin": "Settings (Authorization policies): Can manage authorization policies"
+    "permission.settings.admin": "设置（授权政策）：可管理授权政策"
 }

@@ -7,7 +7,7 @@
     "columns.updatedDate": "Aktualizováno",
     "columns.updatedBy": "Aktualizoval",
     "assignedUsers": "Přiřazení uživatelé",
-    "assignUnassign": "Přiřadit/Zrušit",
+    "assignUnassign": "Přiřadit/Zrušit přiřazení",
     "generalInformation": "Obecné informace",
-    "permission.settings.admin": "Settings (Authorization policies): Can manage authorization policies"
+    "permission.settings.admin": "Nastavení (Pravidla autorizace): Může spravovat pravidla autorizace"
 }
