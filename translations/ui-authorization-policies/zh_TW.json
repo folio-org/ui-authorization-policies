@@ -1,13 +1,13 @@
 {
-    "meta.title": "授權內容",
+    "meta.title": "授權政策",
     "search": "檢索",
     "new": "新增",
     "columns.name": "名稱",
-    "columns.description": "說明",
+    "columns.description": "描述",
     "columns.updatedDate": "已更新",
     "columns.updatedBy": "最後更新：",
     "assignedUsers": "已指派的使用者",
     "assignUnassign": "指派/未指派",
     "generalInformation": "一般資訊",
-    "permission.settings.admin": "設定（授權）：管理授權內容"
+    "permission.settings.admin": "設定（授權政策）：管理授權政策"
 }
