@@ -1,0 +1,13 @@
+{
+    "meta.title": "Authorization policies",
+    "search": "Search",
+    "new": "New",
+    "columns.name": "Name",
+    "columns.description": "Description",
+    "columns.updatedDate": "Updated",
+    "columns.updatedBy": "Updated by",
+    "assignedUsers": "Assigned users",
+    "assignUnassign": "Assign/Unassign",
+    "generalInformation": "General Information",
+    "permission.settings.admin": "Settings (Authorization policies): Can manage authorization policies"
+}
