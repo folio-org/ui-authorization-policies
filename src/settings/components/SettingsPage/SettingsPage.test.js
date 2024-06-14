@@ -3,6 +3,8 @@ import { renderWithIntl } from '@folio/stripes-erm-testing';
 
 import { cleanup } from '@folio/jest-config-stripes/testing-library/react';
 import userEvent from '@folio/jest-config-stripes/testing-library/user-event';
+import { useChunkedCQLFetch, useNamespace } from '@folio/stripes/core';
+
 import SettingsPage from './SettingsPage';
 import translationsProperties from '../../../../test/helpers/translationsProperties';
 
@@ -26,11 +28,23 @@ jest.mock('../../../hooks/useAuthorizationPolicies', () => {
   };
 });
 
+jest.mock('@folio/stripes/core', () => ({
+  ...jest.requireActual('@folio/stripes/core'),
+  useChunkedCQLFetch: () => ({
+    items: [],
+    isLoading: false,
+  }),
+  useNamespace: () => ['namespace'],
+}));
+
 jest.mock('../PolicyDetails/PolicyDetails', () => () => (
   <div data-testid="mock-policy-details">Policy details pane</div>
 ));
 
 describe('SettingsPage', () => {
+  beforeEach(() => {
+  });
+
   afterEach(() => {
     cleanup();
   });
