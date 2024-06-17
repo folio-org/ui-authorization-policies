@@ -41,7 +41,7 @@ const SettingsPage = () => {
   );
 
   const { policies, isLoading, refetch } = useAuthorizationPolicies({ searchTerm });
-  const { users } = useUsers(policies.map(i => i.metadata.modifiedBy));
+  const { users } = useUsers(policies.map(i => i.metadata.updatedByUserId));
 
   const handleSearchSubmit = (event) => {
     event.preventDefault();
@@ -50,11 +50,11 @@ const SettingsPage = () => {
 
   const resultsFormatter = {
     name: (item) => <TextLink>{item.name}</TextLink>,
-    updatedBy: (item) => (item.metadata.modifiedBy ? getFullName(users[item.metadata.modifiedBy]) : (
+    updatedBy: (item) => (item.metadata.updatedByUserId ? getFullName(users[item.metadata.updatedByUserId]) : (
       <NoValue />
     )),
-    updated: (item) => (item.metadata.modifiedDate ? (
-      <FormattedDate value={item.metadata.modifiedDate} />
+    updated: (item) => (item.metadata.updatedDate ? (
+      <FormattedDate value={item.metadata.updatedDate} />
     ) : (
       <NoValue />
     )),

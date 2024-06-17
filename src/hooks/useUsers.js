@@ -14,7 +14,7 @@ const useUsers = (ids) => {
 
   const { items, isLoading } = useChunkedCQLFetch({
     endpoint: 'users',
-    ids: ids.filter(Boolean), // remove empty values
+    ids: Array.from(new Set(ids.filter(Boolean))), // dedupe and deempty
     reduceFunction: chunkedUsersReducer,
     generateQueryKey: ({ chunkedItem, endpoint }) => {
       return [namespace, endpoint, chunkedItem];

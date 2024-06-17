@@ -3,7 +3,7 @@ import { renderWithIntl } from '@folio/stripes-erm-testing';
 
 import { cleanup } from '@folio/jest-config-stripes/testing-library/react';
 import userEvent from '@folio/jest-config-stripes/testing-library/user-event';
-import { useChunkedCQLFetch, useNamespace } from '@folio/stripes/core';
+// import { useChunkedCQLFetch, useNamespace } from '@folio/stripes/core';
 
 import SettingsPage from './SettingsPage';
 import translationsProperties from '../../../../test/helpers/translationsProperties';
@@ -20,7 +20,7 @@ jest.mock('../../../hooks/useAuthorizationPolicies', () => {
           name: 'Test Policy',
           description: 'policy description in free form',
           metadata: {
-            modifiedDate: '2023-03-14T13:11:59.601+00:00',
+            updatedDate: '2023-03-14T13:11:59.601+00:00',
           },
         },
       ],
