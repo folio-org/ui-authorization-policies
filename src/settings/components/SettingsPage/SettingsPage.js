@@ -4,18 +4,19 @@ import PropTypes from 'prop-types';
 import { FormattedMessage, FormattedDate } from 'react-intl';
 
 import {
+  Button,
+  MultiColumnList,
+  NoValue,
   Pane,
   PaneHeader,
-  Paneset,
-  Button,
   PaneMenu,
-  MultiColumnList,
+  Paneset,
   TextLink,
 } from '@folio/stripes/components';
-import { useStripes } from '@folio/stripes/core';
-import { UserName } from '@folio/stripes/smart-components';
+import { getFullName } from '@folio/stripes/util';
 
 import useAuthorizationPolicies from '../../../hooks/useAuthorizationPolicies';
+import useUsers from '../../../hooks/useUsers';
 import { SearchForm } from '../SearchForm';
 import { PolicyDetails } from '../PolicyDetails';
 
@@ -31,10 +32,6 @@ const SettingsPage = () => {
 
   const onRowClick = (_event, row) => setSelectedRow(row);
 
-  const { connect } = useStripes();
-
-  const ConnectedUserName = connect(UserName);
-
   const lastMenu = (
     <PaneMenu>
       <Button buttonStyle="primary" marginBottom0>
@@ -44,6 +41,7 @@ const SettingsPage = () => {
   );
 
   const { policies, isLoading, refetch } = useAuthorizationPolicies({ searchTerm });
+  const { users } = useUsers(policies.map(i => i.metadata.updatedByUserId));
 
   const handleSearchSubmit = (event) => {
     event.preventDefault();
@@ -52,17 +50,13 @@ const SettingsPage = () => {
 
   const resultsFormatter = {
     name: (item) => <TextLink>{item.name}</TextLink>,
-    updatedBy: (item) => (item.metadata.modifiedBy ? (
-      <TextLink>
-        <ConnectedUserName id={item.metadata.modifiedBy} />
-      </TextLink>
-    ) : (
-      '-'
+    updatedBy: (item) => (item.metadata.updatedByUserId ? getFullName(users[item.metadata.updatedByUserId]) : (
+      <NoValue />
     )),
-    updated: (item) => (item.metadata.modifiedDate ? (
-      <FormattedDate value={item.metadata.modifiedDate} />
+    updated: (item) => (item.metadata.updatedDate ? (
+      <FormattedDate value={item.metadata.updatedDate} />
     ) : (
-      '-'
+      <NoValue />
     )),
   };
 

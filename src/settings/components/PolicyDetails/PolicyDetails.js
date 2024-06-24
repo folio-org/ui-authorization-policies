@@ -9,11 +9,10 @@ import {
   AccordionStatus,
   Pane,
   KeyValue,
-  MetaSection,
   NoValue
 } from '@folio/stripes/components';
 
-import { UserName } from '@folio/stripes/smart-components';
+import { ViewMetaData } from '@folio/stripes/smart-components';
 import { useStripes } from '@folio/stripes/core';
 
 import css from '../../style.css';
@@ -21,7 +20,7 @@ import css from '../../style.css';
 const PolicyDetails = ({ policy, onClose }) => {
   const { connect } = useStripes();
 
-  const ConnectedUserName = connect(UserName);
+  const ConnectedViewMetaData = connect(ViewMetaData);
 
   return (
     <Pane
@@ -40,16 +39,11 @@ const PolicyDetails = ({ policy, onClose }) => {
               <FormattedMessage id="ui-authorization-policies.generalInformation" />
             }
           >
-            <MetaSection
+            <ConnectedViewMetaData
               id="policyMetadataId"
               contentId="policyMetadata"
               headingLevel={4}
-              createdDate={policy.metadata?.createdDate}
-              lastUpdatedDate={policy.metadata?.modifiedDate}
-              lastUpdatedBy={
-                <ConnectedUserName id={policy.metadata?.modifiedBy} />
-              }
-              createdBy={<ConnectedUserName id={policy.metadata?.createdBy} />}
+              metadata={policy.metadata}
             />
             <KeyValue
               data-testid="policy-name"
