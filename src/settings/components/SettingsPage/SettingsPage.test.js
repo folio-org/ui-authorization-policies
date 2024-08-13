@@ -79,4 +79,16 @@ describe('SettingsPage', () => {
     await userEvent.click(getAllByRole('gridcell')[0]);
     expect(queryByTestId('mock-policy-details')).toBeInTheDocument();
   });
+
+  it('should render Affiliation selection component', () => {
+    const { getByText } = renderWithIntl(
+      <SettingsPage
+        match={{ path: '/authorization-policies' }}
+        affiliationSelectionComponent={<div>Test Affiliation Selection Component</div>}
+      />,
+      translationsProperties
+    );
+
+    expect(getByText('Test Affiliation Selection Component')).toBeInTheDocument();
+  });
 });

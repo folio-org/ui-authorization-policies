@@ -4,13 +4,13 @@ import { useOkapiKy, useNamespace } from '@folio/stripes/core';
 
 import { POLICIES_ENDPOINT } from '../constants';
 
-const useAuthorizationPolicies = ({ searchTerm, options }) => {
-  const ky = useOkapiKy();
+const useAuthorizationPolicies = ({ searchTerm, options, tenantId }) => {
+  const ky = useOkapiKy({ tenant: tenantId });
 
-  const [nameSpace] = useNamespace({ key: 'ui-authorization-policies' });
+  const [namespace] = useNamespace({ key: 'ui-authorization-policies' });
 
   const { data, isLoading, refetch } = useQuery(
-    [nameSpace],
+    [namespace, tenantId, searchTerm],
     () => ky(POLICIES_ENDPOINT(searchTerm)).json(),
     { enabled: true, ...options }
   );

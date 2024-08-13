@@ -24,9 +24,11 @@ const propTypes = {
   match: PropTypes.shape({
     path: PropTypes.string.isRequired,
   }).isRequired,
+  affiliationSelectionComponent: PropTypes.node,
+  tenantId: PropTypes.string,
 };
 
-const SettingsPage = () => {
+const SettingsPage = ({ affiliationSelectionComponent, tenantId }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedRow, setSelectedRow] = useState(null);
 
@@ -40,7 +42,11 @@ const SettingsPage = () => {
     </PaneMenu>
   );
 
-  const { policies, isLoading, refetch } = useAuthorizationPolicies({ searchTerm });
+  const {
+    policies,
+    isLoading,
+    refetch,
+  } = useAuthorizationPolicies({ searchTerm, tenantId });
   const { users } = useUsers(policies.map(i => i.metadata.updatedByUserId));
 
   const handleSearchSubmit = (event) => {
@@ -73,6 +79,7 @@ const SettingsPage = () => {
           />
         )}
       >
+        {affiliationSelectionComponent}
         <SearchForm
           searchTerm={searchTerm}
           setSearchTerm={setSearchTerm}
