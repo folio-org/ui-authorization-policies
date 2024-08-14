@@ -1,32 +1,30 @@
-import React from 'react';
 import { renderWithIntl } from '@folio/stripes-erm-testing';
 
 import { cleanup } from '@folio/jest-config-stripes/testing-library/react';
 import userEvent from '@folio/jest-config-stripes/testing-library/user-event';
-// import { useChunkedCQLFetch, useNamespace } from '@folio/stripes/core';
+import { useAuthorizationPolicies } from '@folio/stripes-authorization-components';
 
+import translationsProperties from '../../../test/helpers/translationsProperties';
 import SettingsPage from './SettingsPage';
-import translationsProperties from '../../../../test/helpers/translationsProperties';
 
-import useAuthorizationPolicies from '../../../hooks/useAuthorizationPolicies';
-
-jest.mock('../../../hooks/useAuthorizationPolicies', () => {
-  return {
-    __esModule: true,
-    default: jest.fn().mockReturnValue({
-      policies: [
-        {
-          id: 'id',
-          name: 'Test Policy',
-          description: 'policy description in free form',
-          metadata: {
-            updatedDate: '2023-03-14T13:11:59.601+00:00',
-          },
+jest.mock('@folio/stripes-authorization-components', () => ({
+  ...jest.requireActual('@folio/stripes-authorization-components'),
+  useAuthorizationPolicies: jest.fn().mockReturnValue({
+    policies: [
+      {
+        id: 'id',
+        name: 'Test Policy',
+        description: 'policy description in free form',
+        metadata: {
+          updatedDate: '2023-03-14T13:11:59.601+00:00',
         },
-      ],
-    }),
-  };
-});
+      },
+    ],
+  }),
+  useUsers: jest.fn(),
+  PolicyDetails: jest.fn().mockReturnValue(<div data-testid="mock-policy-details">Policy details pane</div>),
+  SearchForm: jest.fn(),
+}));
 
 jest.mock('@folio/stripes/core', () => ({
   ...jest.requireActual('@folio/stripes/core'),
@@ -36,10 +34,6 @@ jest.mock('@folio/stripes/core', () => ({
   }),
   useNamespace: () => ['namespace'],
 }));
-
-jest.mock('../PolicyDetails/PolicyDetails', () => () => (
-  <div data-testid="mock-policy-details">Policy details pane</div>
-));
 
 describe('SettingsPage', () => {
   beforeEach(() => {

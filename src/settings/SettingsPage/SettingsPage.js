@@ -1,8 +1,13 @@
-import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-
+import { useState } from 'react';
 import { FormattedMessage, FormattedDate } from 'react-intl';
 
+import {
+  useAuthorizationPolicies,
+  useUsers,
+  PolicyDetails,
+  SearchForm,
+} from '@folio/stripes-authorization-components';
 import {
   Button,
   MultiColumnList,
@@ -14,11 +19,6 @@ import {
   TextLink,
 } from '@folio/stripes/components';
 import { getFullName } from '@folio/stripes/util';
-
-import useAuthorizationPolicies from '../../../hooks/useAuthorizationPolicies';
-import useUsers from '../../../hooks/useUsers';
-import { SearchForm } from '../SearchForm';
-import { PolicyDetails } from '../PolicyDetails';
 
 const propTypes = {
   match: PropTypes.shape({
@@ -84,6 +84,7 @@ const SettingsPage = ({ affiliationSelectionComponent, tenantId }) => {
           searchTerm={searchTerm}
           setSearchTerm={setSearchTerm}
           onSubmit={handleSearchSubmit}
+          searchLabelId="ui-authorization-policies.search"
         />
         <MultiColumnList
           columnMapping={{
