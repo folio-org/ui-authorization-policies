@@ -4,7 +4,7 @@ import { useOkapiKy, useNamespace } from '@folio/stripes/core';
 
 import { POLICIES_ENDPOINT } from '../constants';
 
-const useAuthorizationPolicies = ({ searchTerm, options, tenantId }) => {
+const useAuthorizationPolicies = ({ searchTerm, options = {}, tenantId }) => {
   const ky = useOkapiKy({ tenant: tenantId });
 
   const [namespace] = useNamespace({ key: 'ui-authorization-policies' });
