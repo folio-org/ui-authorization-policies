@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
-import { useState } from 'react';
-import { FormattedMessage, FormattedDate } from 'react-intl';
+import { useMemo, useState } from 'react';
+import { FormattedMessage } from 'react-intl';
 
 import {
   useAuthorizationPolicies,
@@ -11,14 +11,17 @@ import {
 import {
   Button,
   MultiColumnList,
-  NoValue,
   Pane,
   PaneHeader,
   PaneMenu,
   Paneset,
-  TextLink,
 } from '@folio/stripes/components';
-import { getFullName } from '@folio/stripes/util';
+
+import {
+  COLUMN_MAPPING,
+  getResultsFormatter,
+  VISIBLE_COLUMNS,
+} from './constanta';
 
 const propTypes = {
   match: PropTypes.shape({
@@ -54,17 +57,7 @@ const SettingsPage = ({ affiliationSelectionComponent, tenantId }) => {
     refetch();
   };
 
-  const resultsFormatter = {
-    name: (item) => <TextLink>{item.name}</TextLink>,
-    updatedBy: (item) => (item.metadata.updatedByUserId ? getFullName(users[item.metadata.updatedByUserId]) : (
-      <NoValue />
-    )),
-    updated: (item) => (item.metadata.updatedDate ? (
-      <FormattedDate value={item.metadata.updatedDate} />
-    ) : (
-      <NoValue />
-    )),
-  };
+  const formatter = useMemo(() => getResultsFormatter({ users }), [users]);
 
   return (
     <Paneset>
@@ -87,26 +80,13 @@ const SettingsPage = ({ affiliationSelectionComponent, tenantId }) => {
           searchLabelId="ui-authorization-policies.search"
         />
         <MultiColumnList
-          columnMapping={{
-            name: (
-              <FormattedMessage id="ui-authorization-policies.columns.name" />
-            ),
-            description: (
-              <FormattedMessage id="ui-authorization-policies.columns.description" />
-            ),
-            updated: (
-              <FormattedMessage id="ui-authorization-policies.columns.updatedDate" />
-            ),
-            updatedBy: (
-              <FormattedMessage id="ui-authorization-policies.columns.updatedBy" />
-            ),
-          }}
+          columnMapping={COLUMN_MAPPING}
           contentData={policies}
-          formatter={resultsFormatter}
+          formatter={formatter}
           selectedRow={selectedRow}
           onRowClick={onRowClick}
           loading={isLoading}
-          visibleColumns={['name', 'description', 'updated', 'updatedBy']}
+          visibleColumns={VISIBLE_COLUMNS}
         />
       </Pane>
       {selectedRow && <PolicyDetails policy={selectedRow} onClose={() => setSelectedRow(null)} />}
