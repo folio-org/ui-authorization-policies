@@ -1,13 +1,13 @@
 {
     "meta.title": "Authorization policies",
-    "search": "Search",
+    "search": "検索",
     "new": "新規",
     "columns.name": "名前",
     "columns.description": "Description",
-    "columns.updatedDate": "Updated",
+    "columns.updatedDate": "更新済",
     "columns.updatedBy": "更新者",
     "assignedUsers": "Assigned users",
     "assignUnassign": "割り当て/割り当て解除",
-    "generalInformation": "General Information",
+    "generalInformation": "一般情報",
     "permission.settings.admin": "Settings (Authorization policies): Can manage authorization policies"
 }
