@@ -32,7 +32,8 @@
       "policies": "1.1"
     },
     "stripesDeps": [
-      "@folio/stripes-erm-components"
+      "@folio/stripes-erm-components",
+      "@folio/stripes-authorization-components"
     ],
     "icons": [
       {
@@ -94,6 +95,7 @@
   },
   "dependencies": {
     "@k-int/stripes-kint-components": "^5.0.0",
+    "@folio/stripes-authorization-components": "^1.0.0",
     "classnames": "^2.2.6",
     "compose-function": "^3.0.3",
     "final-form": "^4.18.5",
