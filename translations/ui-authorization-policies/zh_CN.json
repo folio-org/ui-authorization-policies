@@ -2,12 +2,10 @@
     "meta.title": "授权政策",
     "search": "搜索",
     "new": "新建",
-    "columns.name": "名称",
     "columns.description": "描述",
     "columns.updatedDate": "已更新",
     "columns.updatedBy": "更新者",
     "assignedUsers": "已分配用户",
     "assignUnassign": "分配/取消分配",
-    "generalInformation": "概况",
     "permission.settings.admin": "设置（授权政策）：可管理授权政策"
 }

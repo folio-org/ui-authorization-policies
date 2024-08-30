@@ -2,12 +2,10 @@
     "meta.title": "Authorization policies",
     "search": "Szukaj",
     "new": "Nowy",
-    "columns.name": "Nazwa",
     "columns.description": "Opis",
     "columns.updatedDate": "Aktualizowany",
     "columns.updatedBy": "Aktualizowany przez",
     "assignedUsers": "Przydzieleni użytkownicy",
     "assignUnassign": "Przypisz/Odpisz",
-    "generalInformation": "General Information",
     "permission.settings.admin": "Settings (Authorization policies): Can manage authorization policies"
 }
