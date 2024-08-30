@@ -1,13 +1,11 @@
 {
-    "meta.title": "Authorization policies",
-    "search": "Search",
-    "new": "New",
-    "columns.name": "Name",
-    "columns.description": "Description",
-    "columns.updatedDate": "Updated",
-    "columns.updatedBy": "Updated by",
-    "assignedUsers": "Assigned users",
-    "assignUnassign": "Assign/Unassign",
-    "generalInformation": "General Information",
-    "permission.settings.admin": "Settings (Authorization policies): Can manage authorization policies"
+    "meta.title": "Autorisatiebeleid",
+    "search": "Zoeken",
+    "new": "Nieuw",
+    "columns.description": "Omschrijving",
+    "columns.updatedDate": "Bijgewerkt op",
+    "columns.updatedBy": "Bijgewerkt door",
+    "assignedUsers": "Toegewezen gebruikers",
+    "assignUnassign": "Toewijzen/Afwijzen",
+    "permission.settings.admin": "Instellingen (Autorisatiebeleid): Kan autorisatiebeleid beheren"
 }
