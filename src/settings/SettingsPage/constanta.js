@@ -11,10 +11,10 @@ const COLUMN_NAMES = {
 };
 
 export const COLUMN_MAPPING = {
-  [COLUMN_NAMES.name]: <FormattedMessage id="ui-consortia-settings.authorizationPolicy.columns.name" />,
-  [COLUMN_NAMES.description]: <FormattedMessage id="ui-consortia-settings.authorizationPolicy.columns.description" />,
-  [COLUMN_NAMES.updated]: <FormattedMessage id="ui-consortia-settings.authorizationPolicy.columns.updatedDate" />,
-  [COLUMN_NAMES.updatedBy]: <FormattedMessage id="ui-consortia-settings.authorizationPolicy.columns.updatedBy" />,
+  [COLUMN_NAMES.name]: <FormattedMessage id="ui-authorization-policies.columns.name" />,
+  [COLUMN_NAMES.description]: <FormattedMessage id="ui-authorization-policies.columns.description" />,
+  [COLUMN_NAMES.updated]: <FormattedMessage id="ui-authorization-policies.columns.updatedDate" />,
+  [COLUMN_NAMES.updatedBy]: <FormattedMessage id="ui-authorization-policies.columns.updatedBy" />,
 };
 
 export const VISIBLE_COLUMNS = [
