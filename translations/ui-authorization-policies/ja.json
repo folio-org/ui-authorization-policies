@@ -7,5 +7,6 @@
     "columns.updatedBy": "更新者",
     "assignedUsers": "Assigned users",
     "assignUnassign": "割り当て/割り当て解除",
-    "permission.settings.admin": "Settings (Authorization policies): Can manage authorization policies"
+    "permission.settings.admin": "Settings (Authorization policies): Can manage authorization policies",
+    "columns.name": "Name"
 }

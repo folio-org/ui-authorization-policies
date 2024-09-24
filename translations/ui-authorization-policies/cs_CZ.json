@@ -7,5 +7,6 @@
     "columns.updatedBy": "Aktualizoval",
     "assignedUsers": "Přiřazení uživatelé",
     "assignUnassign": "Přiřadit/Zrušit přiřazení",
-    "permission.settings.admin": "Nastavení (Pravidla autorizace): Může spravovat pravidla autorizace"
+    "permission.settings.admin": "Nastavení (Pravidla autorizace): Může spravovat pravidla autorizace",
+    "columns.name": "Name"
 }

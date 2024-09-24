@@ -7,5 +7,6 @@
     "columns.updatedBy": "Bijgewerkt door",
     "assignedUsers": "Toegewezen gebruikers",
     "assignUnassign": "Toewijzen/Afwijzen",
-    "permission.settings.admin": "Instellingen (Autorisatiebeleid): Kan autorisatiebeleid beheren"
+    "permission.settings.admin": "Instellingen (Autorisatiebeleid): Kan autorisatiebeleid beheren",
+    "columns.name": "Name"
 }

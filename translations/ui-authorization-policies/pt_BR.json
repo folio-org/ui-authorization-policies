@@ -7,5 +7,6 @@
     "columns.updatedBy": "Atualizado por",
     "assignedUsers": "Usuários atribuídos",
     "assignUnassign": "Atribuir/Cancelar atribuição",
-    "permission.settings.admin": "Configurações (políticas de autorização): Pode gerenciar políticas de autorização"
+    "permission.settings.admin": "Configurações (políticas de autorização): Pode gerenciar políticas de autorização",
+    "columns.name": "Name"
 }
