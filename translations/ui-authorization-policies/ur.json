@@ -7,5 +7,6 @@
     "columns.updatedBy": "Updated by",
     "assignedUsers": "Assigned users",
     "assignUnassign": "Assign/Unassign",
-    "permission.settings.admin": "Settings (Authorization policies): Can manage authorization policies"
+    "permission.settings.admin": "Settings (Authorization policies): Can manage authorization policies",
+    "columns.name": "Name"
 }
