@@ -8,5 +8,5 @@
     "assignedUsers": "已分配用户",
     "assignUnassign": "分配/取消分配",
     "permission.settings.admin": "设置（授权政策）：可管理授权政策",
-    "columns.name": "Name"
+    "columns.name": "名称"
 }
