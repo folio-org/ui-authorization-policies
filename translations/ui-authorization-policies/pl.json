@@ -8,5 +8,5 @@
     "assignedUsers": "Przydzieleni użytkownicy",
     "assignUnassign": "Przypisz/Odpisz",
     "permission.settings.admin": "Settings (Authorization policies): Can manage authorization policies",
-    "columns.name": "Name"
+    "columns.name": "Nazwa"
 }
