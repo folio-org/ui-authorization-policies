@@ -1668,6 +1668,17 @@
     jest-location-mock "^1.0.9"
     jsdom "^22.1.0"
 
+"@folio/plugin-select-application@^1.0.0":
+  version "1.1.10900000094"
+  resolved "https://repository.folio.org/repository/npm-folioci/@folio/plugin-select-application/-/plugin-select-application-1.1.10900000094.tgz#ad55c9bbbc9cc13fdf98f5c5c692746bb2b9583e"
+  integrity sha512-Z8aijE8R+i0f03tQMGNK7fAqX+UYEUW4re3SpFCy8AH1MuxumVbcRjrjgDaaogr9n+mwBqm1a76rsm2i01ASpA==
+  dependencies:
+    "@k-int/stripes-kint-components" "^5.1.1"
+    classnames "^2.2.5"
+    dom-helpers "^3.4.0"
+    lodash "^4.17.11"
+    prop-types "^15.6.0"
+
 "@folio/service-interaction@^3.1.0":
   version "3.1.100000239"
   resolved "https://repository.folio.org/repository/npm-folioci/@folio/service-interaction/-/service-interaction-3.1.100000239.tgz#9493c9d9aba9529602b5b8fa11d2904a88b4744a"
@@ -1677,6 +1688,17 @@
     dom-helpers "^3.4.0"
     lodash "^4.17.11"
     prop-types "^15.6.0"
+    react-final-form "^6.3.0"
+
+"@folio/stripes-authorization-components@^1.0.0":
+  version "1.0.109000000422"
+  resolved "https://repository.folio.org/repository/npm-folioci/@folio/stripes-authorization-components/-/stripes-authorization-components-1.0.109000000422.tgz#2e4d42740df479cb0801289eae486cac6a320176"
+  integrity sha512-f0LyqYNZSE7M3ESpS5Lj48SeL/uLZaAVroHPB+Ma6Fz/wXfoT1SdKSU3122Rw1OKE52LnpfVFZn2KlG7xZ9cVQ==
+  dependencies:
+    "@folio/plugin-select-application" "^1.0.0"
+    classnames "^2.2.6"
+    lodash "^4.17.21"
+    prop-types "^15.7.2"
     react-final-form "^6.3.0"
 
 "@folio/stripes-cli@^3.1.0":
@@ -1809,12 +1831,13 @@
     rxjs "^6.6.3"
     use-deep-compare "^1.1.0"
 
-"@folio/stripes-erm-components@^9.2.100000801":
-  version "9.2.100000801"
-  resolved "https://repository.folio.org/repository/npm-folioci/@folio/stripes-erm-components/-/stripes-erm-components-9.2.100000801.tgz#1976be78213f2947ab017bdbc21a3ec45dc011cd"
-  integrity sha512-wOt2FyIMIrxpmay+wIKLQ8BiJiKlrxmXxgJSMyISrw2r6ZWh+FG0SHFt0hI+cqc5pBdSCKyVp4XJnwA3eG9xPw==
+"@folio/stripes-erm-components@^9.2.0":
+  version "9.3.10990000000090"
+  resolved "https://repository.folio.org/repository/npm-folioci/@folio/stripes-erm-components/-/stripes-erm-components-9.3.10990000000090.tgz#05ed7e1477410775b205f0bb4626c2ebeee374b7"
+  integrity sha512-5397vIh63iS1qYD4o6OdhaKXesnZL/ayPHDottw7dilsKQlcJLxBGNIdiKd7LIkfOydoabtStQDdAGwNJjn/7w==
   dependencies:
-    "@k-int/stripes-kint-components" "^5.5.1"
+    "@k-int/stripes-kint-components" "^5.8.3"
+    dayjs "^1.11.13"
     final-form "^4.18.4"
     final-form-arrays "^3.0.1"
     final-form-focus "^1.1.2"
@@ -2481,6 +2504,16 @@
     "@rehooks/local-storage" "^2.4.4"
     compose-function "^3.0.3"
     react-resize-detector "^10.0.0"
+    zustand "^4.0.0"
+
+"@k-int/stripes-kint-components@^5.1.1", "@k-int/stripes-kint-components@^5.8.3":
+  version "5.8.3"
+  resolved "https://registry.yarnpkg.com/@k-int/stripes-kint-components/-/stripes-kint-components-5.8.3.tgz#650306e49468282ecadd44fd09a7c89009c65a6a"
+  integrity sha512-ES4j9Fw12s7cC9YLUIYth6Z2eeHv8m4CeU4WnCJwhEM86bxmbl66hCrP41amyRwQ/rh4daZHwbuk3s94DDmpTg==
+  dependencies:
+    "@rehooks/local-storage" "^2.4.4"
+    compose-function "^3.0.3"
+    react-resize-detector "^11.0.0"
     zustand "^4.0.0"
 
 "@kwsites/file-exists@^1.1.1":
@@ -5594,6 +5627,11 @@ dayjs@^1.10.4, dayjs@^1.11.10:
   version "1.11.10"
   resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.11.10.tgz#68acea85317a6e164457d6d6947564029a6a16a0"
   integrity sha512-vjAczensTgRcqDERK0SR2XMwsF/tSvnvlv6VcF2GIhg6Sx4yOIt/irsr1RDJsKiIyBzJDpCoXiWWq28MqH2cnQ==
+
+dayjs@^1.11.13:
+  version "1.11.13"
+  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.11.13.tgz#92430b0139055c3ebb60150aa13e860a4b5a366c"
+  integrity sha512-oaMBel6gjolK862uaPQOVTA7q3TZhuSvuMQAAglQDOWYO9A91IrAOUJEyKVlqJlHE0vq5p5UXxzdPfMH/x6xNg==
 
 debounce@^1.2.1:
   version "1.2.1"
@@ -11637,6 +11675,13 @@ react-resize-detector@^10.0.0:
   version "10.0.1"
   resolved "https://registry.yarnpkg.com/react-resize-detector/-/react-resize-detector-10.0.1.tgz#ae9a8c5b6b93c4c11e03b3eb87e57fd7b62f1020"
   integrity sha512-CR2EdP83ycGlWkhhrd6+hhZVhPJO4xnzClFCTBXlODVTHOgiDJQu77sBt67J7P3gfU4ec/kOuf2c5EcyTUNLXQ==
+  dependencies:
+    lodash "^4.17.21"
+
+react-resize-detector@^11.0.0:
+  version "11.0.1"
+  resolved "https://registry.yarnpkg.com/react-resize-detector/-/react-resize-detector-11.0.1.tgz#70684958ae82bc0deb240d133a1ee440e0624532"
+  integrity sha512-1Tdgu6Ou3vI3RQD+o2/kTvDibb4NRe7Oh83hIjNNEXb6WKKCQT99VQlh3Xlbdq2HtkUoFEMrgMMKkYI83YbD7Q==
   dependencies:
     lodash "^4.17.21"
 
