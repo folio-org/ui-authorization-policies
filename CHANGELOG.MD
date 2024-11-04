@@ -1,6 +1,7 @@
 # Change history for ui-authorization-policies
 
-## 1.3.0 IN PROGRESS
+## [1.3.0](https://github.com/folio-org/ui-authorization-policies/tree/v1.3.0) (2024-11-04)
+[Full Changelog](https://github.com/folio-org/ui-authorization-policies/compare/v1.2.1...v1.3.0)
 
 * Server-side query sort (temporary, lacking i18n).
 * Retrieve updated-by user detail en-masse. Refs UIPOLICIES-11.
