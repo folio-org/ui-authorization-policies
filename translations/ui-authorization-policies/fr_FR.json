@@ -5,7 +5,7 @@
     "columns.description": "Description",
     "columns.updatedDate": "Updated",
     "columns.updatedBy": "Updated by",
-    "assignedUsers": "Assigned users",
+    "assignedUsers": "Utilisateurs attribués",
     "assignUnassign": "Assign/Unassign",
     "permission.settings.admin": "Settings (Authorization policies): Can manage authorization policies",
     "columns.name": "Name"
