@@ -1,3 +1,4 @@
+import { axe, toHaveNoViolations } from 'jest-axe';
 import { renderWithIntl } from '@folio/stripes-erm-testing';
 
 import { cleanup } from '@folio/jest-config-stripes/testing-library/react';
@@ -86,5 +87,21 @@ describe('SettingsPage', () => {
     );
 
     expect(getByText('Test Affiliation Selection Component')).toBeInTheDocument();
+  });
+
+  it('has no a11y violations according to axe', async () => {
+    expect.extend(toHaveNoViolations);
+
+    const { container } = renderWithIntl(
+      <SettingsPage
+        match={{ path: '/authorization-policies' }}
+        affiliationSelectionComponent={<div>Test Affiliation Selection Component</div>}
+      />,
+      translationsProperties
+    );
+
+    const results = await axe(container);
+
+    expect(results).toHaveNoViolations();
   });
 });

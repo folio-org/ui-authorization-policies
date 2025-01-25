@@ -5,6 +5,7 @@
 * Server-side query sort (temporary, lacking i18n).
 * Retrieve updated-by user detail en-masse. Refs UIPOLICIES-11.
 * Add `tenantId` and `affiliationSelectionComponent` props to support Authorization Policies in Consortium settings. Refs UIPOLICIES-14.
+* Add Deque Axe a11y tests. Refs UIPOLICIES-19.
 
 ## [1.2.1](https://github.com/folio-org/ui-authorization-policies/tree/v1.2.1) (2024-03-05)
 [Full Changelog](https://github.com/folio-org/ui-authorization-policies/compare/v1.2.0...v1.2.1)
