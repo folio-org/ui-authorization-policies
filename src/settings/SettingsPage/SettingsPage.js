@@ -17,6 +17,8 @@ import {
   Paneset,
 } from '@folio/stripes/components';
 
+import { useParams } from 'react-router-dom';
+import { useHistory } from 'react-router';
 import {
   COLUMN_MAPPING,
   getResultsFormatter,
@@ -31,11 +33,10 @@ const propTypes = {
   tenantId: PropTypes.string,
 };
 
-const SettingsPage = ({ affiliationSelectionComponent, tenantId }) => {
+const SettingsPage = ({ affiliationSelectionComponent, tenantId, match:{ path } }) => {
+  const { id: policyId } = useParams();
+  const history = useHistory();
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedRow, setSelectedRow] = useState(null);
-
-  const onRowClick = (_event, row) => setSelectedRow(row);
 
   const lastMenu = (
     <PaneMenu>
@@ -57,8 +58,9 @@ const SettingsPage = ({ affiliationSelectionComponent, tenantId }) => {
     refetch();
   };
 
-  const formatter = useMemo(() => getResultsFormatter({ users }), [users]);
+  const formatter = useMemo(() => getResultsFormatter({ users, path }), [users, path]);
 
+  const selectedPolicy = useMemo(() => policies.find(i => i.id === policyId), [policies, policyId]);
   return (
     <Paneset>
       <Pane
@@ -83,13 +85,11 @@ const SettingsPage = ({ affiliationSelectionComponent, tenantId }) => {
           columnMapping={COLUMN_MAPPING}
           contentData={policies}
           formatter={formatter}
-          selectedRow={selectedRow}
-          onRowClick={onRowClick}
           loading={isLoading}
           visibleColumns={VISIBLE_COLUMNS}
         />
       </Pane>
-      {selectedRow && <PolicyDetails policy={selectedRow} onClose={() => setSelectedRow(null)} />}
+      {selectedPolicy && <PolicyDetails policy={selectedPolicy} onClose={() => history.push(path)} />}
     </Paneset>
   );
 };

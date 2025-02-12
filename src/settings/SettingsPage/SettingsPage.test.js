@@ -1,12 +1,8 @@
 import { axe, toHaveNoViolations } from 'jest-axe';
-import { renderWithIntl } from '@folio/stripes-erm-testing';
-
-import { cleanup } from '@folio/jest-config-stripes/testing-library/react';
-import userEvent from '@folio/jest-config-stripes/testing-library/user-event';
-import { useAuthorizationPolicies } from '@folio/stripes-authorization-components';
-
-import translationsProperties from '../../../test/helpers/translationsProperties';
+import { cleanup, render } from '@folio/jest-config-stripes/testing-library/react';
+import React from 'react';
 import SettingsPage from './SettingsPage';
+import { renderWithRouter } from '../../../test/helpers';
 
 jest.mock('@folio/stripes-authorization-components', () => ({
   ...jest.requireActual('@folio/stripes-authorization-components'),
@@ -38,53 +34,28 @@ jest.mock('@folio/stripes/core', () => ({
   useNamespace: () => ['namespace'],
 }));
 
-describe('SettingsPage', () => {
-  beforeEach(() => {
-  });
+jest.mock('react-router-dom', () => {
+  return { ...jest.requireActual('react-router-dom'),
+    useParams: jest.fn().mockReturnValue({ id: 'id' }) };
+});
 
-  afterEach(() => {
+
+describe('SettingsPage', () => {
+  afterAll(() => {
+    jest.clearAllMocks();
     cleanup();
   });
 
   it('renders the SettingsPage component', () => {
-    const { getByText } = renderWithIntl(
-      <SettingsPage match={{ path: '/authorization-policies' }} />,
-      translationsProperties
-    );
-
-    expect(getByText('+ New')).toBeInTheDocument();
-    expect(getByText('Test Policy')).toBeInTheDocument();
+    const { getByText } = render(renderWithRouter(<SettingsPage match={{ path:'authorization-policies/id' }} />));
+    expect(getByText(/ui-authorization-policies.new/)).toBeInTheDocument();
     expect(getByText('3/14/2023')).toBeInTheDocument();
     expect(getByText('policy description in free form')).toBeInTheDocument();
-  });
-
-  it('renders policy details on click', async () => {
-    useAuthorizationPolicies.mockImplementationOnce(() => ({
-      policies: [
-        {
-          id: 'id',
-          name: 'Test policy',
-          description: 'Test policy description',
-          metadata: {},
-        },
-      ],
-    }));
-    const { queryByTestId, getAllByRole } = renderWithIntl(
-      <SettingsPage match={{ path: '/authorization-policies' }} />,
-      translationsProperties
-    );
-    await userEvent.click(getAllByRole('gridcell')[0]);
-    expect(queryByTestId('mock-policy-details')).toBeInTheDocument();
+    expect(getByText('Policy details pane')).toBeInTheDocument();
   });
 
   it('should render Affiliation selection component', () => {
-    const { getByText } = renderWithIntl(
-      <SettingsPage
-        match={{ path: '/authorization-policies' }}
-        affiliationSelectionComponent={<div>Test Affiliation Selection Component</div>}
-      />,
-      translationsProperties
-    );
+    const { getByText } = render(renderWithRouter(<SettingsPage affiliationSelectionComponent={<div>Test Affiliation Selection Component</div>} match={{ path:'authorization-policies/id' }} />));
 
     expect(getByText('Test Affiliation Selection Component')).toBeInTheDocument();
   });
@@ -92,12 +63,11 @@ describe('SettingsPage', () => {
   it('has no a11y violations according to axe', async () => {
     expect.extend(toHaveNoViolations);
 
-    const { container } = renderWithIntl(
-      <SettingsPage
+    const { container } = render(
+      renderWithRouter(<SettingsPage
         match={{ path: '/authorization-policies' }}
         affiliationSelectionComponent={<div>Test Affiliation Selection Component</div>}
-      />,
-      translationsProperties
+      />)
     );
 
     const results = await axe(container);
