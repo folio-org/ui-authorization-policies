@@ -1,4 +1,5 @@
 import { Suspense } from 'react';
+import PropTypes from 'prop-types';
 import { useIntlKeyStore } from '@k-int/stripes-kint-components';
 import { Switch, Route } from 'react-router-dom';
 import Settings from './settings';
@@ -14,6 +15,12 @@ const App = (props) => {
       </Switch>
     </Suspense>
   );
+};
+
+App.propTypes = {
+  match: PropTypes.shape({
+    path: PropTypes.string.isRequired,
+  })
 };
 
 export default App;
