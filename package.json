@@ -79,6 +79,7 @@
     "@folio/stripes-testing": "^4.2.0",
     "graphql": "^16.0.0",
     "moment": "^2.22.2",
+    "history": "^4.10.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-intl": "^6.4.4",
@@ -94,13 +95,14 @@
     "typescript": "^2.8.0"
   },
   "dependencies": {
-    "@k-int/stripes-kint-components": "^5.0.0",
     "@folio/stripes-authorization-components": "^1.0.0",
+    "@k-int/stripes-kint-components": "^5.0.0",
     "classnames": "^2.2.6",
     "compose-function": "^3.0.3",
     "final-form": "^4.18.5",
     "final-form-arrays": "^3.0.1",
     "final-form-focus": "^1.1.2",
+    "jest-axe": "^9.0.0",
     "lodash": "^4.17.11",
     "prop-types": "^15.6.0",
     "query-string": "^6.6.0",

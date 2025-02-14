@@ -24,8 +24,8 @@ export const VISIBLE_COLUMNS = [
   COLUMN_NAMES.updatedBy,
 ];
 
-export const getResultsFormatter = ({ users }) => ({
-  [COLUMN_NAMES.name]: (item) => <TextLink>{item.name}</TextLink>,
+export const getResultsFormatter = ({ users, path }) => ({
+  [COLUMN_NAMES.name]: (item) => <TextLink to={`${path}/${item.id}`}>{item.name}</TextLink>,
   [COLUMN_NAMES.updatedBy]: (item) => (item.metadata.updatedByUserId
     ? getFullName(users[item.metadata.updatedByUserId])
     : <NoValue />
