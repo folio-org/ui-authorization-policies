@@ -1,5 +1,9 @@
 # Change history for ui-authorization-policies
 
+## 2.0.0 IN PROGRESS
+
+* *BREAKING* migrate react-intl to v7. Refs UIPOLICIES-22.
+
 ## 1.3.0 IN PROGRESS
 
 * Server-side query sort (temporary, lacking i18n).
