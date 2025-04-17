@@ -2,11 +2,11 @@
     "meta.title": "Authorization policies",
     "search": "Search",
     "new": "New",
-    "columns.description": "Description",
-    "columns.updatedDate": "Updated",
-    "columns.updatedBy": "Updated by",
-    "assignedUsers": "Assigned users",
-    "assignUnassign": "Assign/Unassign",
+    "columns.description": "الوصف",
+    "columns.updatedDate": "تم التحديث",
+    "columns.updatedBy": "تم التحديث بواسطة",
+    "assignedUsers": "المستخدمين المعينين",
+    "assignUnassign": "تعيين/إلغاء تعيين",
     "permission.settings.admin": "Settings (Authorization policies): Can manage authorization policies",
-    "columns.name": "Name"
+    "columns.name": "الاسم"
 }
