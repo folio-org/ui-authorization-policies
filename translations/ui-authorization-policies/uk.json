@@ -7,6 +7,6 @@
     "columns.updatedBy": "Оновлено за",
     "assignedUsers": "Призначені користувачі",
     "assignUnassign": "Призначити/Скасувати призначення",
-    "permission.settings.admin": "Settings (Authorization policies): Can manage authorization policies",
+    "permission.settings.admin": "Налаштування (Політики авторизації): Управління політиками авторизації",
     "columns.name": "Name"
 }
