@@ -1,12 +1,12 @@
 {
-    "meta.title": "Authorization policies",
-    "search": "Search",
-    "new": "New",
-    "columns.description": "Description",
-    "columns.updatedDate": "Updated",
-    "columns.updatedBy": "Updated by",
-    "assignedUsers": "Assigned users",
-    "assignUnassign": "Assign/Unassign",
-    "permission.settings.admin": "Settings (Authorization policies): Can manage authorization policies",
-    "columns.name": "Name"
+    "meta.title": "Yetkilendirme politikaları",
+    "search": "Ara",
+    "new": "Yeni",
+    "columns.description": "Açıklama",
+    "columns.updatedDate": "Güncelle",
+    "columns.updatedBy": "Tarafından güncelle",
+    "assignedUsers": "Atanmış kullanıcılar",
+    "assignUnassign": "Atama/Atamayı Kaldırma",
+    "permission.settings.admin": "Ayarlar (Yetkilendirme politikaları): Yetkilendirme politikalarını yönetebilir",
+    "columns.name": "İsim"
 }
