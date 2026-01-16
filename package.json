@@ -47,7 +47,8 @@
         "permissionName": "settings.authorization-policies.enabled",
         "displayName": "Settings (Authorization policies): display list of settings pages",
         "subPermissions": [
-          "settings.enabled"
+          "settings.enabled",
+          "stripes-core.settings.read"
         ]
       },
       {
