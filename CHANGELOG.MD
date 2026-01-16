@@ -4,6 +4,7 @@
 
 * *BREAKING* migrate react-intl to v7. Refs UIPOLICIES-22.
 * *BREAKING* migrate stripes dependencies to their Sunflower versions. Refs UIPOLICIES-23.
+* Include universal read-only permissions. Refs UIPOLICIES-26.
 
 ## 1.3.0 IN PROGRESS
 
