@@ -1,0 +1,12 @@
+{
+    "meta.title": "Yetkilendirme politikaları",
+    "search": "Ara",
+    "new": "Yeni",
+    "columns.description": "Açıklama",
+    "columns.updatedDate": "Güncelle",
+    "columns.updatedBy": "Tarafından güncelle",
+    "assignedUsers": "Atanmış kullanıcılar",
+    "assignUnassign": "Atama/Atamayı Kaldırma",
+    "permission.settings.admin": "Ayarlar (Yetkilendirme politikaları): Yetkilendirme politikalarını yönetebilir",
+    "columns.name": "İsim"
+}

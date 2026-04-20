@@ -1,12 +1,12 @@
 {
-    "meta.title": "권한 정책",
+    "meta.title": "Authorization policies",
     "search": "Search",
     "new": "New",
     "columns.description": "Description",
     "columns.updatedDate": "Updated",
-    "columns.updatedBy": "업데이트",
+    "columns.updatedBy": "Updated by",
     "assignedUsers": "Assigned users",
     "assignUnassign": "Assign/Unassign",
-    "permission.settings.admin": "설정 (권한 정책): 권한 정책 (authorized policies) 관리",
+    "permission.settings.admin": "Settings (Authorization policies): Can manage authorization policies",
     "columns.name": "Name"
 }

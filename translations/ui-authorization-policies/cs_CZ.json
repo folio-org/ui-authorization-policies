@@ -4,7 +4,7 @@
     "new": "Nový",
     "columns.description": "Popis",
     "columns.updatedDate": "Aktualizováno",
-    "columns.updatedBy": "Aktualizoval",
+    "columns.updatedBy": "Aktualizoval/a",
     "assignedUsers": "Přiřazení uživatelé",
     "assignUnassign": "Přiřadit/Zrušit přiřazení",
     "permission.settings.admin": "Nastavení (Pravidla autorizace): Může spravovat pravidla autorizace",

@@ -1,12 +1,12 @@
 {
-    "meta.title": "Authorization policies",
-    "search": "Search",
-    "new": "New",
-    "columns.description": "Description",
-    "columns.updatedDate": "Updated",
-    "columns.updatedBy": "Оновлено за",
-    "assignedUsers": "Assigned users",
-    "assignUnassign": "Assign/Unassign",
-    "permission.settings.admin": "Settings (Authorization policies): Can manage authorization policies",
-    "columns.name": "Name"
+    "meta.title": "Політики авторизації",
+    "search": "Пошук",
+    "new": "Нове",
+    "columns.description": "Опис",
+    "columns.updatedDate": "Оновлено",
+    "columns.updatedBy": "Оновлено (ким)",
+    "assignedUsers": "Призначені користувачі",
+    "assignUnassign": "Призначити/Скасувати призначення",
+    "permission.settings.admin": "Налаштування (Політики авторизації): Управління політиками авторизації",
+    "columns.name": "Ім'я/Назва"
 }
