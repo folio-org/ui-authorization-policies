@@ -1,13 +1,10 @@
 {
   "name": "@folio/authorization-policies",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "FOLIO app for Authorization Policies",
   "main": "src/index.js",
   "repository": "folio/ui-authorization-policies",
   "license": "Apache-2.0",
-  "engines": {
-    "node": ">=10.0.0"
-  },
   "scripts": {
     "start": "stripes serve",
     "build": "stripes build --output ./output",
@@ -73,7 +70,7 @@
     "@folio/eslint-config-stripes": "^8.0.0",
     "@folio/jest-config-stripes": "^3.0.0",
     "@folio/service-interaction": "^4.0.0",
-    "@folio/stripes": "^10.0.0",
+    "@folio/stripes": "^10.1.0",
     "@folio/stripes-cli": "^4.0.0",
     "@folio/stripes-erm-components": "^10.0.0",
     "@folio/stripes-erm-testing": "^3.0.0",
@@ -112,7 +109,7 @@
   },
   "peerDependencies": {
     "@folio/service-interaction": "^4.0.0",
-    "@folio/stripes": "^10.0.0",
+    "@folio/stripes": "^10.1.0",
     "moment": "^2.22.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

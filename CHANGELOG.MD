@@ -1,11 +1,16 @@
 # Change history for ui-authorization-policies
 
+## [3.0.0] (https://github.com/folio-org/ui-authorization-policies/tree/v3.0.0) (2026-04-20)
+[Full Changelog](https://github.com/folio-org/ui-authorization-policies/compare/v3.0.0...v2.0.0)
+
+* *BREAKING* Update `stripes` to v10.1.0.
+* Include universal read-only permissions. Refs UIPOLICIES-26.
+
 ## [2.0.0] (https://github.com/folio-org/ui-authorization-policies/tree/v2.0.0) (2025-03-13)
 [Full Changelog](https://github.com/folio-org/ui-authorization-policies/compare/v2.0.0...v1.3.0)
 
 * *BREAKING* migrate react-intl to v7. Refs UIPOLICIES-22.
 * *BREAKING* migrate stripes dependencies to their Sunflower versions. Refs UIPOLICIES-23.
-* Include universal read-only permissions. Refs UIPOLICIES-26.
 * Server-side query sort (temporary, lacking i18n).
 * Retrieve updated-by user detail en-masse. Refs UIPOLICIES-11.
 * Add `tenantId` and `affiliationSelectionComponent` props to support Authorization Policies in Consortium settings. Refs UIPOLICIES-14.
