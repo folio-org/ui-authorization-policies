@@ -41,7 +41,7 @@ const SettingsPage = ({ affiliationSelectionComponent, tenantId, match:{ path } 
   const lastMenu = (
     <PaneMenu>
       <Button buttonStyle="primary" marginBottom0>
-        + <FormattedMessage id="ui-authorization-policies.new" />
+        <FormattedMessage id="ui-authorization-policies.new" />
       </Button>
     </PaneMenu>
   );

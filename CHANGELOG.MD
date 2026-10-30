@@ -1,5 +1,9 @@
 # Change history for ui-authorization-policies
 
+## IN PROGRESS
+
+* Remove the "+" sign in front of the word "New". Refs UIPOLICIES-28.
+
 ## [2.0.0] (https://github.com/folio-org/ui-authorization-policies/tree/v2.0.0) (2025-03-13)
 [Full Changelog](https://github.com/folio-org/ui-authorization-policies/compare/v2.0.0...v1.3.0)
 
